@@ -6,11 +6,18 @@
 
 #include <ctype.h>
 #include <stdio.h>
-
+/**
+* What is the purpose of the bitwise OR with 32 and the character subtraction?
+* Decide the range of c 
+* unsigned is necessary. 
+* If ch<-'#', and no unsigned symbol, it will negative and it's < 6, not right
+*/
 int my_isxdigit(int c)
 {
     return isdigit(c) || ((unsigned)c|32)-'a' < 6;
+    
 }
+
 
 char *my_strcpy(char *dst, const char *src)
 {
