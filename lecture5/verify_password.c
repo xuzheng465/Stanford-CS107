@@ -18,25 +18,46 @@
  * not contain any of the substrings in the `badSubstrings` array.
  */
 bool verifyPassword(char *password, char *validChars,
-                    char *badSubstrings[], int numBadSubstrings) {
+                    char *badSubstrings[], int numBadSubstrings)
+{
     // TODO
+    int size = strlen(password);
+    int bad_num = sizeof(badSubstrings) / sizeof(badSubstrings[0]);
+    bool v = true;
+    for (int i = 0; i < bad_num; i++)
+    {
+        if (strstr(password, badSubstrings[i]))
+        {
+            v = false;
+        }
+    }
+    if (strspn(password, validChars) == size && v)
+    {
+        return true;
+    }
     return false;
 }
 
-int main(int argc, char *argv[]) {
-    if (argc == 1) {
+int main(int argc, char *argv[])
+{
+    if (argc == 1)
+    {
         error(1, 0, "Please provide the password you would like to verify\n");
-    } else {
+    }
+    else
+    {
         char *badSubstrings[] = {
             "password",
-            "secret"
-        };
-        
+            "secret"};
+
         bool valid = verifyPassword(argv[1], "abcdefghijklmnopqrstuvwxyz0123456789",
                                     badSubstrings, 2);
-        if (valid) {
+        if (valid)
+        {
             printf("That password is valid!\n");
-        } else {
+        }
+        else
+        {
             printf("That is an invalid password.\n");
         }
     }
