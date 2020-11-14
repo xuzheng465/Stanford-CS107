@@ -19,10 +19,10 @@ int my_isxdigit(int c)
 }
 
 
-char *my_strcpy(char *dst, const char *src)
+char *mystrcpy(chr *dst, const char *src)
 {
     char *result = dst;
-    while ((*dst++ = *src++)) ;
+    while ((*dst++ = *src++));
     return result;
 }
 
