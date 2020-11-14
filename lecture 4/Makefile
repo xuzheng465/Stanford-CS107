@@ -1,7 +1,7 @@
 # A simple makefile for building a program composed of C source files.
 # Refer to CS107 guide to Make for background info on makefiles
 
-PROGRAMS = diamond diamond_soln
+PROGRAMS = diamond diamond_soln strex1
 
 all:: $(PROGRAMS)
 
