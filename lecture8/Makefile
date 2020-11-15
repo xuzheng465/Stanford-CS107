@@ -1,7 +1,7 @@
 # A simple makefile for building a program composed of C source files.
 # Refer to CS107 guide to Make for background info on makefiles
 
-PROGRAMS = verify_password memory_errors memory castex
+PROGRAMS = int_stack generic_stack swap swap_ends rotate rotate_soln
 
 all:: $(PROGRAMS)
 
