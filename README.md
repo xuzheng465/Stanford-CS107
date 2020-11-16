@@ -2,7 +2,7 @@
 Computer Organization &amp; Systems
 
 - [ ] [Lab 1]
-- [ ] [Lab 2](l2)
+- [X] [Lab 2](l2)
 - [ ] [Lab 3]
 - [ ] [Lab 4]
 - [ ] [Lab 5]
